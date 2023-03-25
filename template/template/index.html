@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="{{ url_for('static', filename='img/171_Logo_White.png')}}"
+          type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>BCC 171 | Official Website</title>
+    <meta content="BCC 171 | Official Website" property="og:title"/>
+    <meta content="https://punzaza.xyz/" property="og:url"/>
+    <meta content="https://static.punzaza.xyz/img/embed_banner.jpg" property="og:image"/>
+    <meta name="twitter:card" content="summary_large_image">
+
+</head>
+<style>
+    html {
+        height: 100%;
+        margin: 0;
+    }
+
+
+    .body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(115, 19, 114, 0.7);
+        z-index: 0;
+        transition: 0.7s;
+    }
+
+    .dream::before { /* keepthis */
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(45, 45, 45, 1);
+        z-index: 0;
+        transition: 0.7s;
+    }
+
+    body {-ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+        background-image: url("{{ url_for('static', filename='img/Background2.png')}}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+
+    .logo {
+        top: 50%;
+        left: 50%;
+
+        position: absolute;
+        box-shadow: none;
+        animation-name: fadeinlogo;
+        animation-duration: 1s;
+        opacity: 1;
+    }
+
+    .arrow-d {
+        position: absolute;
+        box-shadow: none;
+        margin-top: 30vh;
+        left: 50%;
+        top: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        animation-name: fadeinarrow;
+        animation-duration: 1s;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .bccdreamscape {
+        opacity: 1;
+        color: #ffffff;
+        background-color: transparent;
+        width: 50vh;
+        margin-top: 110vh;
+        height: 150px;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 5%;
+        animation-name: fadeindream;
+        animation-duration: 1s;
+    }
+
+    .bccdreamtext1 {
+        font-family: 'Kanit', serif;
+        font-weight: 800;
+    }
+    .bccdreamtext2 {
+        font-family: 'Kanit', serif;
+        font-weight: 300;
+    }
+
+    .image {
+        margin-bottom: 15vh;
+        animation-name: fadeindream;
+        animation-duration: 1s;
+    }
+
+    .joindream {
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .joindream:hover {
+        color: grey;
+        font-size: 17px;
+    }
+
+    @keyframes fadeinlogo {
+        0% {
+            opacity: 0;
+            margin-top: -5vh;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 0vh;
+        }
+    }
+
+    @keyframes fadeoutlogo {
+        0% {
+            opacity: 1;
+            margin-top: 0vh;
+        }
+        100% {
+            opacity: 0;
+            margin-top: -5vh;
+        }
+    }
+
+    @keyframes fadeinarrow {
+        0% {
+            opacity: 0;
+            margin-top: 25vh;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 30vh;
+        }
+    }
+
+    @keyframes fadeoutarrow {
+        0% {
+            opacity: 1;
+            margin-top: 30vh;
+        }
+        100% {
+            opacity: 0;
+            margin-top: 25vh;
+        }
+    }
+
+    @keyframes fadeindream {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeoutdream {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+</style>
+<body id="body" class="body">
+<div id="logo" class="logo">
+    <img src="{{ url_for('static', filename='img/171_Logo_White.png')}}" alt="" width="200px" height="200px">
+</div>
+<div id="arrow-d" class="arrow-d">
+    <svg onclick="scrollWin()" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="white"
+         class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        <path fill-rule="evenodd"
+              d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+    </svg>
+</div>
+<div id="bccdreamscape" class="bccdreamscape position-absolute start-50 top-50 translate-middle">
+    <img id="bccdream" class="image" src="{{ url_for('static', filename='img/logo_bccdreamscape.png')}}" alt="" width="150px"
+         height="150px">
+    <h3 class="bccdreamtext1">BCC-Dreamscape</h3>
+    <h4 class="bccdreamtext2"> ถ้าเชื่อมั่น มันจะมีจริง </h4>
+    <a class="joindream bccdreamtext2" href="https://dreamscape.punzaza.xyz/" target="_blank">ไม่เชื่อลองดู</a>
+</div>
+</body>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (currentScrollPos < 20) {
+            document.getElementById("logo").style.animationName = "fadeinlogo";
+            document.getElementById("arrow-d").style.animationName = "fadeinarrow";
+            document.getElementById("logo").style.opacity = "1";
+            document.getElementById("arrow-d").style.opacity = "1";
+            document.getElementById("body").className = "body";
+            document.getElementById("bccdreamscape").style.opacity = "0";
+            document.getElementById("bccdreamscape").style.animationName = "fadeoutdream";
+        } else {
+            document.getElementById("logo").style.animationName = "fadeoutlogo";
+            document.getElementById("arrow-d").style.animationName = "fadeoutarrow";
+            document.getElementById("logo").style.opacity = "0";
+            document.getElementById("arrow-d").style.opacity = "0";
+            document.getElementById("body").className = "dream";
+            document.getElementById("bccdreamscape").style.opacity = "1";
+            document.getElementById("bccdreamscape").style.animationName = "fadeindream";
+
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+    function scrollWin() {
+        document.getElementById("bccdreamscape").scrollIntoView({block: 'center'});
+    }
+
+</script>

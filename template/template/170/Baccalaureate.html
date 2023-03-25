@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>BCC 170 | Baccalaureate</title>
+    <meta content="BCC 170 | Baccalaureate" property="og:title"/>
+    <meta content="พิธีจบหลักสูตรนักเรียนชั้นมัธยมศึกษาปีที่ 6 รุ่น 170 วันเสาร์ที่ 18 กุมภาพันธ์ 2566  เวลา 08:00 น. ณ หอธรรม โรงเรียนกรุงเทพคริสเตียนวิทยาลัย"
+          property="og:description"/>
+    <meta content="https://170.punzaza.xyz/" property="og:url"/>
+    <meta content="https://static.punzaza.xyz/170/embed_banner.jpg" property="og:image"/>
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='170/favicon2.png')}}">
+
+    <link href="{{ url_for('static', filename='170/soonx.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='170/media.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          crossorigin="anonymous">
+</head>
+
+<body class="light" style="" data-new-gr-c-s-check-loaded="14.1095.0" data-gr-ext-installed="">
+
+<!-- Snow-->
+
+<canvas class="snow-canvas" width="1920" height="872"></canvas>
+
+<!-- started id wrap  -->
+
+<div id="wrap">
+
+    <!--starts logo div -->
+
+    <div class="logo">
+        <div class="container"><a href="https://youtu.be/Dx6gvb5F8ng"> <img
+                src="{{ url_for('static', filename='170/BCC170-BW_LOGO.png')}}" alt="bcc170 logo" class="logo"></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--ended logo div -->
+
+    <div class="clear"></div>
+
+    <!-- starts counter -->
+
+    <div class="counter lightcounter">
+        <div class="container">
+            <ul class="countdown_2">
+                <li>
+                    <span class="days">00</span>
+                    <p class="days_ref">วัน</p>
+                </li>
+                <li>
+                    <span class="hours">00</span>
+                    <p class="hours_ref">ชั่วโมง</p>
+                </li>
+                <li>
+                    <span class="minutes">00</span>
+                    <p class="minutes_ref">นาที</p>
+                </li>
+                <li>
+                    <span class="seconds last">00</span>
+                    <p class="seconds_ref">วินาที</p>
+                </li>
+            </ul>
+            <div class="lightnotify mid">
+                <p2>พิธีจบหลักสูตรนักเรียนชั้นมัธยมศึกษาปีที่ 6 รุ่น 170</p2>
+                <p>วันเสาร์ที่ 18 กุมภาพันธ์ 2566&nbsp; เวลา 08:00 น. <br>
+                    ณ หอธรรม โรงเรียนกรุงเทพคริสเตียนวิทยาลัย</p>
+                <div id="result"></div>
+
+            </div>
+            <div class="clear"></div>
+            <div class="lightsocial">
+                <ul>
+                    <li><a href="https://www.facebook.com/bcc170th/" class="fa fb"><i class="fa fa-facebook"></i></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/bcc170th/" class="fa in"><i class="fa fa-instagram"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!-- end counter -->
+    <div class="clear"></div>
+
+    <!-- start footer -->
+
+    <div class="lightfooter">
+        <div class="container">
+            <p>Copyrights © 2023 BCC 170 Public Relations - All Rights Reserved.</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--end footer -->
+
+</div>
+
+<!-- ended id wrap  -->
+<script type="text/javascript" src="{{ url_for('static', filename='170/jquery.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='170/jquery.downCount.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='170/snow-plugin.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='170/functions.js')}}"></script>
+<script type="text/javascript">
+    $('.countdown_2').downCount();
+    $(".snow-canvas").snow();
+</script>
+
+</body>
+</html>
