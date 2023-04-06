@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 # set template folder (html files) and static folder (css/js files)
 app = Flask(__name__, template_folder='template', static_folder=None)
-app.config['SERVER_NAME'] = 'punzaza.xyz:443'
+app.config['SERVER_NAME'] = 'domainname:443'
 app.static_folder = 'static'
 app.add_url_rule('/<path:filename>',
                  endpoint='static',
